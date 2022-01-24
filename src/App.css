@@ -1,38 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  height: 500vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tabFlex {
+  display: flex;
+  padding: 7px 20px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  color: white;
+  background-color: transparent;
+  margin-top: 20px;
+  transition: transform .6s ease;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.tabFlex2 {
+  display: flex;
+  padding: 7px 20px;
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  color: white;
+  background-color: rgb(36, 35, 35);
+  margin-top: 20px;
+  transition: transform 6s ease;
+  animation: myanimation 3s;
+}
+@keyframes myanimation {
+  0% {
+    background-color: transparent;
+  }
+  35% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: rgb(36, 35, 35);
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tab-header {
+  flex-basis: 35%;
+}
+.tab-route {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-basis: 35%;
+  justify-content: space-evenly;
+  margin: 1px 60px;
+}
+.tab-home, .tab-movies, .tab-series {
+  display: flex;
+  cursor: pointer;
+  padding: 0 10px;
+  text-decoration: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+a h3 {
+  font-size: 15px;
+  margin-top: -1px;
+  padding-top: 10px;
+}
+.active .tabs {
+  background-color: rgb(101, 57, 182);
+  transition: .9s ease-out;
+  border-radius: 7px;
+}
+.tabs {
+  display: flex;
+  height: 40px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+.icon-tab {
+  width: 25px;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+.tab-btn {
+  flex-basis: 40%;
+  justify-content: flex-end;
+  margin: 10px 0;
+}
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-tab {
+  padding: 10px 28px;
+  margin-right: 10px;
+  background-color: transparent;
+  border: solid 2px white;
+  border-radius: 7px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+}
+.page {
+  width: 100%;
+  margin-top: -1.5em;
+}
+.bg-dark {
+  background-color: rgb(36, 35, 35);
+}
+.home-welcome {
+  text-align: center;
+  color: white;
+  line-height: 5px;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+.home-welcome h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+.home-welcome h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+#search-text-input {
+  width: 25em;
+  padding: 15px 2px 15px 60px;
+  position: relative;
+  justify-content: center;
+  margin: 0 auto;
+  font-weight: 400;
+  border-radius: 7px;
+  outline: white;
+}
+.absolute-search {
+  position: absolute;
+  margin-top: -2.3em;
+  margin-left: -180px;
+  opacity: .5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*movies*/
+
