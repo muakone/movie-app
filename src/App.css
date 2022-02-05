@@ -98,6 +98,7 @@ a h3 {
   color: white;
   font-size: 15px;
   font-weight: 700;
+  cursor: pointer;
 }
 .page {
   width: 100%;
@@ -130,12 +131,46 @@ a h3 {
   font-weight: 400;
   border-radius: 7px;
   outline: white;
+  border: solid 1px white;
 }
 .absolute-search {
   position: absolute;
   margin-top: -2.3em;
   margin-left: -180px;
   opacity: .5;
+}
+.trendingContainer {
+  padding: 10px 20px;
+  margin: 38px 30px;
+  color: white;
+  text-transform: uppercase;
+  background-color: rgb(78, 8, 136);
+  width: 220px;
+  text-align: center;
+  font-size: 1.3em;
+  border-radius: 2px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.bg-form {
+  background-color: white;
+  width: 38%;
+  position: fixed;
+  bottom: 5em;
+  top: 5em;
+  margin: 0 auto;
+  display: flex;
+  right: 0;
+  left: 0;
+  box-shadow: 2px 2px 15px gray;
+  border-radius: 10px;
+  color: black;
+  text-align: center;
+  justify-content: center;
+}
+.modal-center {
+  text-align: center;
+  justify-content: center;
 }
 
 /*movies*/

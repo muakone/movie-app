@@ -6,9 +6,21 @@ import { BrowserRouter as Router, Route, Routes, NavLink } from "react-router-do
 import Homes from '../screen/Home';
 import Movies from '../screen/Movies';
 import Series from '../screen/Series';
+import ModalRegister from '../screen/ModalRegister'
+import ModalLogin  from '../screen/ModalLogin'
 
 const NavTab = () => {
     const [tabFlex, setHeader] = useState("tabFlex")
+    const [showModalRegister, setShowModalRegister] = useState(false)
+    const [showModalLogin, setShowModalLogin] = useState(false)
+
+
+    const openModalRegister = () => {
+      setShowModalRegister(prev => !prev);
+    };
+    const openModalLogin = () => {
+      setShowModalLogin(prev => !prev)
+    }
 
 const listenScrollEvent = (event) => {
   if (window.scrollY < 73) {
@@ -51,10 +63,14 @@ useEffect(() => {
          </nav> 
           <div className='tab-btn'>
             <div className='btn-container'>
-                <button className='btn-tab'>Login</button>
-                <button className='btn-tab'>Register</button>
+                <button className='btn-tab' onClick={openModalLogin}>Login</button>
+                <div>
+                <button className='btn-tab' onClick={openModalRegister}>Register</button>
+                </div>
             </div>
           </div>
+          <ModalRegister showModalRegister={showModalRegister} setShowModalRegister={setShowModalRegister} />
+          <ModalLogin showModalLogin={showModalLogin} setShowModalLogin={setShowModalLogin} />
       </section>
     <Routes>
         <Route exact path="/" element={<Homes/>} />

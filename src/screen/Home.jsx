@@ -1,12 +1,15 @@
 import React from 'react';
 import HomeWelcome from '../component/HomeWelcome';
+import TrendingMovies from '../component/TrendingMovies';
 
 const Homes = () => {
   return <div className='page'>
     <div className='bg-dark'>
       <HomeWelcome/>
     </div>
-      <h1>hhvgghggh</h1>
+      <section>
+       <TrendingMovies/>
+      </section>
   </div>;
 };
 
